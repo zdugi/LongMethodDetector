@@ -1,5 +1,7 @@
 # LongMethodDetector
 
+![alt text](poster_preview.png "Poster")
+
 ## Autor
 
 - Zdravko Dugonjić SW25/2017
