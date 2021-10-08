@@ -1,0 +1,17 @@
+public String update() throws Exception {
+    logger.info("Starting update()");
+    Sessions s = HibernateUtil.getSessionFactory()
+                .openSession();
+    Transaction t = 
+        s.beginTransaction();
+    s.update(this.product);
+    t.commit();
+    s.close();
+    this.task = SystemConstants.UD_MODE;
+    this.addActionMessage(this.getText(
+        "updateSuccessful",
+        new String[]{"product"})
+    );
+    logger.info("Finishing update()");
+    return INPUT;
+}
